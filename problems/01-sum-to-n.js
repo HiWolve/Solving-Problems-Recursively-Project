@@ -11,7 +11,23 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
-// your code here
+function sumToN(num) {
+
+  if (num < 0) {
+    return null;
+  }
+
+  // Base Case
+  if (num === 1) {
+    return 1;
+  }
+
+  // Recursive Step
+  return num + sumToN(num - 1);
+
+}
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
