@@ -13,6 +13,17 @@ reverse(""); // ""
 ***********************************************************************/
 
 // your code here
+function reverse(string) {
+  if (string.length === 1) {
+    return string
+  }
+
+  else if (string.length === 0) {
+    return ""
+  }
+
+  return reverse(string.slice(1)) + string[0];
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
@@ -20,3 +31,10 @@ try {
 } catch (e) {
   module.exports = null;
 }
+
+console.log(reverse("house")); // "esuoh"
+console.log(reverse("dog")); // "god"
+console.log(reverse("atom")); // "mota"
+console.log(reverse("q")); // "q"
+console.log(reverse("id")); // "di"
+console.log(reverse("")); // ""
