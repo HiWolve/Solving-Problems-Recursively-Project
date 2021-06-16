@@ -15,11 +15,28 @@ Examples:
 fibonacci(1); // 1
 fibonacci(2); // 1
 fibonacci(3); // 2
-fibonacci(4); // 3
+fibonacci(4); // 3   3 2  5
 fibonacci(10); // 55
 ***********************************************************************/
 
 // your code here
+
+function fibonacci(num){
+  if (num <= 1) {
+    return num
+  }
+
+  else { 
+    return fibonacci(num - 1) + fibonacci(num - 2);
+
+  }
+}
+
+console.log(fibonacci(1)); // 1
+console.log(fibonacci(2)); // 1
+console.log(fibonacci(3)); // 2
+console.log(fibonacci(4)); // 3  
+console.log(fibonacci(10)); // 55
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
@@ -27,4 +44,3 @@ try {
 } catch (e) {
   module.exports = null;
 }
-  
